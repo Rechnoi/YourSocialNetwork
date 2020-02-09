@@ -1,56 +1,122 @@
 <template>
-  <v-app>
-    <v-app-bar
+  <v-app
+    id="app"
+  >
+    <v-navigation-drawer
       app
-      color="primary"
+      color="green"
       dark
+      expand-on-hover
+      hide-overlay
+      permanent
+      right 
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+      <v-list
+        nav 
+        shaped
+        dense
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+        <v-list-item
+          two-line
+        >
+          <v-list-item-avatar>
+            <img src="https://randomuser.me/api/portraits/men/12.jpg">
+          </v-list-item-avatar>
 
-    <v-content>
-      <HelloWorld/>
+          <v-list-item-content
+            class="text-left"
+          >
+            <v-list-item-title
+              class="font-weight-black"
+            >
+              SocialLink
+            </v-list-item-title>
+            <v-list-item-subtitle>
+              Иван Иванов
+            </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-divider class="my-3"/>
+
+        <v-list-item
+          link
+          to="/1"
+        >
+          <v-list-item-icon>
+            <v-icon>
+              mdi-home-outline
+            </v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title
+              class="text-left"
+            >
+              Главная
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item
+          link
+          to="/1"
+        >
+          <v-list-item-icon>
+            <v-icon>
+              mdi-account
+            </v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title
+              class="text-left"
+            >
+              Мой профиль
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item
+          link
+          to="/1"
+        >
+          <v-list-item-icon>
+            <v-icon>
+              mdi-account-multiple-plus
+            </v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title
+              class="text-left"
+            >
+              Найти друзей
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+    <v-content
+      class="px-12 py-3"
+    >
+      <v-container
+        fluid
+      >
+        <router-view/>
+      </v-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+//import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    
   },
 
   data: () => ({
