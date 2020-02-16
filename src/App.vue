@@ -60,7 +60,7 @@
 
         <v-list-item
           link
-          to="/1"
+          to="/users/1"
         >
           <v-list-item-icon>
             <v-icon>
@@ -79,7 +79,7 @@
 
         <v-list-item
           link
-          to="/1"
+          to="/users"
         >
           <v-list-item-icon>
             <v-icon>
